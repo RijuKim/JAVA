@@ -1,0 +1,22 @@
+package chapter2;
+
+public class ExplictConversion {
+	public static void main(String[] args) {
+		int iNum=1000;
+		byte bNum=(byte)iNum; //명시적 형 변환 바이트 크기가 큰 자료형에서 작은 자료형으로 대입하는 경우 괄호로 바꿀 형을 써서 명시해야 함
+		
+		System.out.println(iNum);
+		System.out.println(bNum);
+		
+		double dNum=3.14;
+		iNum=(int)dNum;
+		float fNum=0.9F;
+		
+		int num1=(int)dNum+(int)fNum; //3+0(형 변환시 실수 부분 제외 "유실됨")
+		int num2=(int)(dNum+fNum); //3.14+0.9=4.23
+		
+		System.out.println(num1);
+		System.out.println(num2);
+	}
+
+}
