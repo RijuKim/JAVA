@@ -13,10 +13,10 @@ public class ExplictConversion {
 		float fNum=0.9F;
 		
 		int num1=(int)dNum+(int)fNum; //3+0(형 변환시 실수 부분 제외 "유실됨")
-		int num2=(int)(dNum+fNum); //3.14+0.9=4.23
+		int num2=(int)(dNum+fNum); //3.14+0.9=4.23 (실수 부분 유실)
 		
-		System.out.println(num1);
-		System.out.println(num2);
+		System.out.println(num1); //3
+		System.out.println(num2); //4
 	}
 
 }
