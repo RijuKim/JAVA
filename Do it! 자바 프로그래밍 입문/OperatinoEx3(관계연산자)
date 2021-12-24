@@ -1,0 +1,16 @@
+package assignment;
+
+public class OperationEx3 {
+
+	public static void main(String[] args) {
+
+		int num1 =10;
+		int i =2;
+		
+		boolean value =(((num1=num1+10)<10) || ((i=i+2)>10));
+		System.out.println(value); //앞 뒤항 모두 false 이므로 false
+		System.out.println(num1); //앞 항 평가됐기 때문에 10+10 연산
+		System.out.println(i); //앞 항 false로 뒷항도 평가 되어서 2+2 연산(만약 앞 항 true라면 뒷항 계산 안되기 때문에 2가 됨)
+	}
+
+}
