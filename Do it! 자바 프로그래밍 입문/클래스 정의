@@ -8,7 +8,7 @@ public class Student { //클래스 정의 (접근제어자)
 	String address;
 	
 	public void showStudentInfo() {//메서드 추가
-		System.out.println(studentName+ ",", +address); //이름, 주소 출력
+		System.out.println(studentName + "," + address); //이름, 주소 출력
 	}
 	
 	public static void main(String[] args) { //클래스 구동 시키는 메인 함수
@@ -18,7 +18,7 @@ public class Student { //클래스 정의 (접근제어자)
 		studentLee.studentID=100;
 		studentLee.address="서울시 서초구 서초동";
 		
-		studentLee.showStudentInfor();
+		studentLee.showStudentInfo();
 		
 	}
 
