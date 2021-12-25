@@ -13,9 +13,10 @@ public class Student { //클래스 정의 (접근제어자)
 	
 	public static void main(String[] args) { //클래스 구동 시키는 메인 함수
 		
-		Student studentLss= new Student();
-		studentLee.studentName='이순신';
-		studentLee.address='서울시 서초구 서초동';
+		Student studentLee= new Student();
+		studentLee.studentName="이순신";
+		studentLee.studentID=100;
+		studentLee.address="서울시 서초구 서초동";
 		
 		studentLee.showStudentInfor();
 		
