@@ -1,0 +1,18 @@
+package thisex;
+
+public class StudentTest1 {
+
+	public static void main(String[] args) {
+		Student studentR=new Student();
+		studentR.setStudentName("김리주");
+		System.out.println(studentR.serialNum); //serialNum 변수의 초깃값 출력
+		studentR.serialNum++;
+		
+		Student studentE=new Student();
+		studentE.setStudentName("권이나");
+		System.out.println(studentR.serialNum); //증가된 값 출력
+		System.out.println(studentE.serialNum);
+
+	}
+
+}
