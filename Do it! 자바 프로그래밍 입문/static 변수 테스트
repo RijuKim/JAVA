@@ -5,13 +5,13 @@ public class StudentTest1 {
 	public static void main(String[] args) {
 		Student studentR=new Student();
 		studentR.setStudentName("김리주");
-		System.out.println(studentR.serialNum); //serialNum 변수의 초깃값 출력
+		System.out.println(Student.serialNum); //serialNum 변수의 초깃값 출력 static 변수는 new로 메모리가 생성되는 것이 아니라 프로그램이 메모리에 로드될 때 잡힘
 		studentR.serialNum++;
 		
 		Student studentE=new Student();
 		studentE.setStudentName("권이나");
-		System.out.println(studentR.serialNum); //증가된 값 출력
-		System.out.println(studentE.serialNum);
+		System.out.println(Student.serialNum); //증가된 값 출력
+		System.out.println(Student.serialNum); //static 변수들은 사용 시 클래스 이름으로 사용
 
 	}
 
