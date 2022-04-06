@@ -1,0 +1,26 @@
+package xyz;
+
+public class Z extends Y {
+	int i = 30;
+	String msg = "I an a Z.";
+
+	void print() {
+		System.out.println(msg);
+	}
+
+	void play() {
+		System.out.println("Play.." + msg);
+	}
+
+	void doZ() {
+		System.out.println("do somethind in Z.");
+	}
+
+	void test(int i) {
+		Z z = new Z();
+		Y y = z;
+		X x = z;
+		z.print();
+		y.print();
+	}
+}

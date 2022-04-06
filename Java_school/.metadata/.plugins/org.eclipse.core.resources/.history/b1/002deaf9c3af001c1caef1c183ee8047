@@ -1,0 +1,16 @@
+package lab3;
+
+public class PenP {
+	String vender;
+	String color;
+	int price;
+	
+	public Pen4() {
+	}
+	
+	public Pen4(String name) {
+		vender=name;
+	}
+	
+	public void 
+}

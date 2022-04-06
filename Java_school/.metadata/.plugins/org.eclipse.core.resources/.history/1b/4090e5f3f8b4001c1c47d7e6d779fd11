@@ -1,0 +1,31 @@
+package myException;
+
+import java.util.ArrayList;
+
+public class Student {
+	//Student 클래스의 멤버 변수
+	String studentName; //학생이름
+	int studentGrade; //학생학년
+    int studentID; //학생학번
+    ArrayList<Subject> subjectList;
+	
+	public Student(String studentName, int studentGrade, int studentID) {
+		this.studentName = studentName;
+		this.studentGrade = studentGrade;
+		this.studentID = studentID;
+	}
+	
+	public void addClassSeat(String subjectName, int studentID) {
+		Subject subject = new Subject(); //Subject 생성
+		subject.setSubjectName(subjectName); //수강신청한 과목이름 추가
+		subject.setSeatNum(studentID); //수강신청하면 seatNum에 학번 저장
+		subjectList.add(subject); //배열에 저장하기 
+	}
+	
+	public void grade (int grade) throws RestrictionGrade{
+		if(grade<=2) {
+			throw new RestrictionGrade();
+		}
+	}
+	//public void seats(int headCount) throws 
+}

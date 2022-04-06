@@ -1,0 +1,11 @@
+package SharingP;
+
+public class SharingUse {
+	public SharingUse() {
+		
+	}
+	
+	public void sprint() {
+		System.out.println("Printing for Interface");
+	}
+}

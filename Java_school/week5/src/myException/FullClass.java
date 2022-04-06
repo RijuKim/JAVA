@@ -1,0 +1,7 @@
+package myException;
+
+public class FullClass extends Exception{
+	public FullClass() {
+		super("수강 가능 좌석이 없습니다.");
+	}
+}

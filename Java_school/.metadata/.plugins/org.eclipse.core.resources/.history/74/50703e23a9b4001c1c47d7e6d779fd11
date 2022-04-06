@@ -1,0 +1,21 @@
+package exceptionTest;
+
+public class Bank {
+
+	public static void main(String[] args) {
+		Account hong = new Account("홍길동");
+		hong.deposit(20);
+		//hong.deposit(-100); //MalfomedData 예외발생 
+		
+		try {
+			hong.withdraw(15);
+			hong.deposit(-20);
+		} catch (BalanceOutOfBoundsException be) {
+			be.printStackTrace();
+		} catch (MalformedData me) {
+			me.printStackTrace();
+		}
+		hong.check();
+	}
+
+}

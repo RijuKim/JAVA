@@ -1,0 +1,10 @@
+package myException;
+
+public class School {
+
+	public static void main(String[] args) {
+		Student Kim = new Student("김리주", 1710541, 3);
+		Kim.addClassSeat("객체", 3, 1710541);;
+	}
+
+}

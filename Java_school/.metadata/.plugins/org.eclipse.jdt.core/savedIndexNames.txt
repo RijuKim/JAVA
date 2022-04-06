@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/Users/kimrijoo/Java/Java_school/.metadata/.plugins/org.eclipse.jdt.core
+2660520490.index
+15779721.index
+2012739359.index
+3918750396.index
+1816963510.index

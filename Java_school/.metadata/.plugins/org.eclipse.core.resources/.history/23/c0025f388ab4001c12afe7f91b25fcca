@@ -1,0 +1,7 @@
+package exceptionTest;
+
+public class BalanceOutOfBoundsException {
+	public BalanceOutOfBoundsException() {
+		super("잔액을 초과하였습니");
+	}
+}
