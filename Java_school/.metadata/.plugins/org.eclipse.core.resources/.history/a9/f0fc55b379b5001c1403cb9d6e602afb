@@ -1,0 +1,69 @@
+package myException;
+
+import java.util.ArrayList;
+
+public class Student {
+	//Student 클래스의 멤버 변수
+	String studentName; //학생이름
+	int studentGrade; //학생학년
+    int studentID; //학생학번
+    ArrayList<Subject> subjectList;
+
+	public Student(String studentName, int studentGrade, int studentID) {
+		this.studentName = studentName;
+		this.studentGrade = studentGrade;
+		this.studentID = studentID;
+		subjectList = new ArrayList<Subject>;
+	}
+	
+	public void showStudentRegistration() {
+		for(Subject s : subjectList) {
+		System.out.println(studentName+" ,"+s.getSeatNum()+" 학생의 "+s.getSubjectName()+" 과목 수강신청이 성공하였습니다.");
+		}
+	}
+	
+	//객체지향프로그래밍 과목 수강신청 메서드 
+	public void oopRegistration (String subjectName, int studentGrade, int studentID){
+		
+		//학생이 수강신청한 과목을 subjectList 배열에 하나씩 추가
+		Subject subject = new Subject(); //Subject 생성
+		subject.setSubjectName(subjectName); //수강신청한 과목이름 추가
+		subject.setSubjectGrade(studentGrade); //수강신청한 과목학년 추가	
+		subject.setSeatNum(studentID); //수강신청하면 seatNum에 학번 저장	
+		subjectList.add(subject); //배열에 저장하기 
+			
+		//수강신청하는 학생이 1학년일 경우 수강신청 거부
+			if (studentGrade==1) {
+				try {
+					lowGrade();
+				} catch (RestrictionGrade e) {
+					e.printStackTrace();
+				}
+				subjectList.removeAll(subjectList);
+				System.out.println("수강신청에 실패하였습니다: 2학년부터 신청가능합니다.");
+			}
+			
+			//for(Subject s: subjectList) {
+		    int lastSeat=subjectList.size()-1; //마지막 자리 인덱스
+			
+			if (subjectList.get(lastSeat)!=null) {
+				try {
+					noSeats();
+				} catch (FullClass e) {
+					e.printStackTrace();
+				}
+				System.out.println("수강신청에 실패하였습니다: 좌석이 없습니다.");
+				}
+			//}
+	}
+	
+
+	public void lowGrade() throws RestrictionGrade {
+		throw new RestrictionGrade();	
+	}
+	
+	
+	public void noSeats() throws FullClass{
+		throw new FullClass();
+	}
+}

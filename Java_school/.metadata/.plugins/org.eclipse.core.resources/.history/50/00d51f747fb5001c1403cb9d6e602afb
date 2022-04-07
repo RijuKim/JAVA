@@ -1,0 +1,8 @@
+package myException;
+
+public class differentMajor extends Exception{
+	public FullClass() {
+			super("수강 가능 좌석이 없습니다.");
+		}
+	}
+}

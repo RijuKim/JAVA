@@ -1,0 +1,7 @@
+package myException;
+
+public class DifferentMajor extends Exception{
+		public DifferentMajor() {
+			super("수강가능 전공이 아닙니다.");
+		}
+	}

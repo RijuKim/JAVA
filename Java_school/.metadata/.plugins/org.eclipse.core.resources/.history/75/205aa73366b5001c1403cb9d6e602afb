@@ -1,0 +1,24 @@
+package myException;
+
+public class School {
+
+	public static void main(String[] args) {
+		//학생 김리주의 객체지향프로그래밍 수강신청, 3학년이므로 신청가능
+		Student studentKim = new Student("김리주", 3, 1710541);
+		studentKim.oopRegistration("객체지향프로그래밍", 3, 1710541);
+		studentKim.showStudentRegistration();
+		
+		
+		//학생 이민지의 객체지향프로그래밍 수강신청, 1학년이므로 신청 불가능 
+		Student studentLee = new Student("이민지", 1, 222011);
+		studentLee.oopRegistration("객체지향프로그래밍", 1, 222011);
+		studentLee.showStudentRegistration();
+		/*try {
+		studentLee.lowGrade(1);
+		} catch (RestrictionGrade be) {
+			be.printStackTrace();
+		}
+		System.out.println("수강가능 학년이 아닙니다");*/
+	}
+
+}

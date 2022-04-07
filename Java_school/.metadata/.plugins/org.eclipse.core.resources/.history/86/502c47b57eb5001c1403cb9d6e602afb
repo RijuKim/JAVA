@@ -1,0 +1,38 @@
+package myException;
+
+public class School {
+
+	public static void main(String[] args) {
+		//학생 김리주의 객체지향프로그래밍 수강신청, 3학년이므로 신청가능
+		Student studentKim = new Student("김리주", 3, 1710541);
+		studentKim.oopRegistration("객체지향프로그래밍", 3, 1710541);
+		studentKim.showStudentRegistration();
+		
+		
+		//학생 이민지의 객체지향프로그래밍 수강신청, 1학년이므로 신청 불가능 
+		Student studentLee = new Student("이민지", 1, 222011);
+		studentLee.oopRegistration("객체지향프로그래밍", 1, 222011);
+		studentLee.showStudentRegistration();
+		
+		//학생 김리주의 객체지향프로그래밍 수강신청, 2학년이므로 신청가능
+		Student studentPark = new Student("박지윤", 2, 201422);
+		studentPark.oopRegistration("객체지향프로그래밍", 2, 201422);				
+		studentPark.showStudentRegistration();
+		
+		//학생 조은서의 객체지향프로그래밍 수강신청, 2학년이므로 신청가능
+		Student studentJo = new Student("조은서", 2, 2110541);
+		studentJo.oopRegistration("객체지향프로그래밍", 3, 2110541);	
+		studentJo.showStudentRegistration();
+		
+		//학생 유은혜의 객체지향프로그래밍 수강신청, 4학년이므로 신청가능
+		Student studentYu = new Student("유은혜", 4, 1812498);
+		studentYu.oopRegistration("객체지향프로그래밍", 4, 1812498);
+		studentYu.showStudentRegistration();
+		
+		//학생 구지호의 객체지향프로그래밍 수강신청, 4학년이므로 신청가능
+		Student studentGu = new Student("구지", 4, 1812498);
+		studentGu.oopRegistration("객체지향프로그래밍", 4, 1812498);
+		studentGu.showStudentRegistration();
+	}
+
+}

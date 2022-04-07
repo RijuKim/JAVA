@@ -1,0 +1,54 @@
+package myException;
+
+import java.util.ArrayList;
+
+public class Student {
+	//Student 클래스의 멤버 변수
+	String studentName; //학생이름
+	int studentGrade; //학생학년
+    int studentID; //학생학번
+    ArrayList<Subject> subjectList;
+	
+	public Student(String studentName, int studentGrade, int studentID) {
+		this.studentName = studentName;
+		this.studentGrade = studentGrade;
+		this.studentID = studentID;
+		subjectList = new ArrayList<Subject>();
+	}
+	
+	//학생이 수강신청한 과목을 subjectList 배열에 하나씩 추가하여 좌석을 확인하는 메서드
+	/*public void addClassSeat(String subjectName, int studentGrade, int studentID) {
+		Subject subject = new Subject(); //Subject 생성
+		subject.setSubjectName(subjectName); //수강신청한 과목이름 추가
+		subject.setSubjectGrade(studentGrade); //수강신청한 과목학년 추가
+		subject.setSeatNum(studentID); //수강신청하면 seatNum에 학번 저장
+		subjectList.add(subject); //배열에 저장하기 
+	}*/
+	
+	public void showStudentRegistration() {
+		for(Subject s : subjectList) {
+		System.out.println(studentName+","+s.getSeatNum()+" 학생의 "+s.getSubjectName()+" 과목 수강신청이 성공하였습니다.");
+		}
+	}
+	
+	public void oopRegistration (String subjectName, int studentGrade, int studentID) throws RestrictionGrade{
+		Subject subject = new Subject(); //Subject 생성
+		subject.setSubjectName(subjectName); //수강신청한 과목이름 추가
+		subject.setSubjectGrade(studentGrade); //수강신청한 과목학년 추가
+		subject.setSeatNum(studentID); //수강신청하면 seatNum에 학번 저장
+		subjectList.add(subject); //배열에 저장하기 
+		
+		for (Subject s : subjectList) {
+			if (s.getSubjectGrade()!=1) {
+			throw new RestrictionGrade();
+			}
+		}
+	}
+	
+	/*public void lowGrade (int grade) throws RestrictionGrade{
+		if (subjectList.contains(1)) {
+			throw new RestrictionGrade();
+		}
+	}*/
+	//public void seats(int headCount) throws 
+}
