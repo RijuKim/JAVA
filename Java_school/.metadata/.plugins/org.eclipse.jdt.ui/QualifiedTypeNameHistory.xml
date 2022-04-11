@@ -18,4 +18,5 @@
     <fullyQualifiedTypeName name="exceptionTest.Account"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="javax.security.auth.Subject"/>
+    <fullyQualifiedTypeName name="java.awt.Frame"/>
 </qualifiedTypeNameHistroy>
